@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github, Mail, ChevronRight, Code, BookOpen, Calendar } from 'lucide-react';
+import { Github, Mail, ChevronRight, Code, BookOpen, Calendar, Youtube } from 'lucide-react';
 import { BlogList } from './pages/BlogList';
 import { BlogPostPage } from './pages/BlogPost';
 import { useEffect, useState } from 'react';
@@ -104,26 +104,6 @@ const Home = () => {
         </motion.div>
       </section>
 
-      <section className="video-section container">
-        <motion.div
-          className="glass-card"
-          style={{ padding: '0.5rem', overflow: 'hidden' }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-        >
-          <div className="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/ILpke2d95jU"
-              title="Let's Build with AI - Featured Project"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </motion.div>
-      </section>
-
       <section id="projects" className="container" style={{ padding: '8rem 0' }}>
         <h2 className="section-title">AI Projects</h2>
         <div className="projects-grid">
@@ -131,6 +111,31 @@ const Home = () => {
             <ProjectCard key={i} {...p} />
           ))}
         </div>
+
+        <motion.div
+          className="glass-card"
+          style={{ padding: '3rem', marginTop: '2rem', textAlign: 'center' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div style={{ color: '#ff0000', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+            <Youtube size={48} />
+          </div>
+          <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Persephone's Pomegranate</h3>
+          <p style={{ maxWidth: '700px', margin: '0 auto 2rem auto', opacity: 0.8, fontSize: '1.1rem' }}>
+            Explore my YouTube channel featuring high-quality AI-generated music and experimental visual content. A creative journey into the intersection of technology and art.
+          </p>
+          <a
+            href="https://youtube.com/@persephonespomegranate-gt3jk?si=iR3voJ3w4BQV0eB9"
+            className="cta-button"
+            style={{ display: 'inline-flex', margin: '0 auto' }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Channel <ChevronRight size={20} />
+          </a>
+        </motion.div>
       </section>
 
       <section id="blog" className="container" style={{ padding: '5rem 0' }}>
