@@ -104,6 +104,26 @@ const Home = () => {
         </motion.div>
       </section>
 
+      <section className="video-section container">
+        <motion.div
+          className="glass-card"
+          style={{ padding: '0.5rem', overflow: 'hidden' }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          <div className="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/ILpke2d95jU"
+              title="Let's Build with AI - Featured Project"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </motion.div>
+      </section>
+
       <section id="projects" className="container" style={{ padding: '8rem 0' }}>
         <h2 className="section-title">AI Projects</h2>
         <div className="projects-grid">
