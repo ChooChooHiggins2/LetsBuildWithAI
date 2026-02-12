@@ -1,3 +1,10 @@
+---
+title: "Project 1: Persephone’s Pomegranate (My AI Music Channel Experiment)"
+date: "2026-02-11"
+excerpt: "How I built generated music using AI and other modern web tools."
+author: "B.D.Higgins"
+---
+
 Project 1: Persephone’s Pomegranate (My AI Music Channel Experiment)
 I didn’t start with some serious AI startup.
 My first real project was a simple YouTube music channel: I used Suno to make songs and a mix of Canva, CapCut, and Audacity to turn them into videos. It was clunky, messy, and exactly what I needed to start shipping instead of just thinking.
@@ -101,6 +108,9 @@ Scenes
 Individual shots and moments
 
 Instead of just throwing clips on a timeline and hoping it felt cool, I started mapping things out: intro shots, main sections, transitions, and an ending. Basically, I went from “slideshow with vibes” to “there’s a rough plan here.”
+
+
+
 
 That was the first time I realized music videos aren’t just random visuals with a song underneath. They’re built from a sequence of planned shots, and a simple storyboard makes the whole process way less chaotic and way more intentional.
 
