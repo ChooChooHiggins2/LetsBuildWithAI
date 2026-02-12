@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github, Mail, ChevronRight, Code, BookOpen, Calendar, Youtube } from 'lucide-react';
+import { Github, Mail, ChevronRight, Code, BookOpen, Calendar, Youtube, Utensils } from 'lucide-react';
 import { BlogList } from './pages/BlogList';
 import { BlogPostPage } from './pages/BlogPost';
 import { useEffect, useState } from 'react';
@@ -45,6 +45,31 @@ const ProjectCard = ({ title, description, link }: { title: string, description:
   </motion.div>
 );
 
+const ChannelCard = ({ title, description, link, icon: Icon, color }: { title: string, description: string, link: string, icon: any, color: string }) => (
+  <motion.div
+    className="glass-card"
+    style={{ padding: '2.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column' }}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+  >
+    <div style={{ color: color, marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+      <Icon size={40} />
+    </div>
+    <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{title}</h3>
+    <p style={{ opacity: 0.8, fontSize: '0.95rem', marginBottom: '2rem', flexGrow: 1 }}>{description}</p>
+    <a
+      href={link}
+      className="cta-button"
+      style={{ display: 'inline-flex', margin: '0 auto' }}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Visit Channel <ChevronRight size={20} />
+    </a>
+  </motion.div>
+);
+
 const Home = () => {
   const [latestPosts, setLatestPosts] = useState<BlogPost[]>([]);
 
@@ -72,6 +97,23 @@ const Home = () => {
       title: "Creative Studio",
       description: "An AI-powered art pipeline for generating and upscaling coloring pages.",
       link: "#"
+    }
+  ];
+
+  const channels = [
+    {
+      title: "Persephone's Pomegranate",
+      description: "A creative engine focused on high-quality AI-generated music and experimental visuals. A passion-first project blending human artistic vision with machine power.",
+      link: "https://youtube.com/@persephonespomegranate-gt3jk?si=iR3voJ3w4BQV0eB9",
+      icon: Youtube,
+      color: "#ff0000"
+    },
+    {
+      title: "Let's Build with AI 101",
+      description: "A high-speed automation experiment. Daily AI-generated recipe shorts created through a seamless ChatGPT → CapCut pipeline. Pure efficiency and scale.",
+      link: "https://youtube.com/@letsbuildwithai-101?si=6ejGtidyzuADeKON",
+      icon: Utensils,
+      color: "#10b981"
     }
   ];
 
@@ -112,30 +154,12 @@ const Home = () => {
           ))}
         </div>
 
-        <motion.div
-          className="glass-card"
-          style={{ padding: '3rem', marginTop: '2rem', textAlign: 'center' }}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div style={{ color: '#ff0000', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
-            <Youtube size={48} />
-          </div>
-          <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Persephone's Pomegranate</h3>
-          <p style={{ maxWidth: '700px', margin: '0 auto 2rem auto', opacity: 0.8, fontSize: '1.1rem' }}>
-            Explore my YouTube channel featuring high-quality AI-generated music and experimental visual content. A creative journey into the intersection of technology and art.
-          </p>
-          <a
-            href="https://youtube.com/@persephonespomegranate-gt3jk?si=iR3voJ3w4BQV0eB9"
-            className="cta-button"
-            style={{ display: 'inline-flex', margin: '0 auto' }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Channel <ChevronRight size={20} />
-          </a>
-        </motion.div>
+        <h2 className="section-title" style={{ marginTop: '4rem', fontSize: '2rem' }}>Experimenting on YouTube</h2>
+        <div className="channels-grid">
+          {channels.map((channel, i) => (
+            <ChannelCard key={i} {...channel} />
+          ))}
+        </div>
       </section>
 
       <section id="blog" className="container" style={{ padding: '5rem 0' }}>

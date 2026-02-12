@@ -231,6 +231,14 @@ footer {
   font-style: italic;
   opacity: 0.8;
 }
+
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
 .video-section {
   max-width: 960px;
   margin: 0 auto;
@@ -239,10 +247,11 @@ footer {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   height: 0;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .video-wrapper iframe {
