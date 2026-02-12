@@ -10,7 +10,7 @@ I didn’t start with some serious AI startup.
 My first real project was a simple YouTube music channel: I used Suno to make songs and a mix of Canva, CapCut, and Audacity to turn them into videos. It was clunky, messy, and exactly what I needed to start shipping instead of just thinking.
 
 You can see it here if you want to scroll from the ugly beginnings to the slightly less ugly present:
-[Persephone’s Pomegranate on YouTube] (https://youtube.com/@persephonespomegranate-gt3jk)
+[Persephone’s Pomegranate on YouTube](https://youtube.com/@persephonespomegranate-gt3jk)
 
 Why I Started the Channel
 I had made some music I really liked using AI, and I wanted to share it with people. 
